@@ -1,2 +1,6 @@
 # web-330
-WEB330
+Enterprise JavaScript II
+# contributors
+Professor Krasso - Bellevue University
+<br/>
+Arlix Sorto - Bellevue University
