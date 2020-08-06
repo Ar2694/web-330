@@ -17,12 +17,14 @@
 */
 
 // start program
-/* Import sorto-header.js from the root directory*/
+
+/* Import header.js from the root directory*/
 const header = require("../header.js");
 
 /** Calls the display function and output the header*/
 console.log(header.display("Arlix", "Sorto", "Exercise 1.3"));
-console.log("")
+console.log("");
+
 function Cellphone(manufacturer, model, color, price) {  
 
     this.manufacturer = manufacturer;
