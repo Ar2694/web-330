@@ -70,6 +70,7 @@ for(var i = 0; i < racetrack.length; i++){
   
     console.log(racetrack[i].constructor.name + ": " + racetrack[i].model);
 }
+console.log("");
 // end program
 
 
