@@ -14,7 +14,7 @@ var header = require('../header.js');
 // start program
 
 /** Calls the display function and output the header*/
-console.log(header.display("Arlix", "Sorto", "Exercise 3.2"));
+console.log(header.display("Arlix", "Sorto", "Exercise 3.3"));
 console.log("");
 
 //Database singleton class
