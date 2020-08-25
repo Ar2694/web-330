@@ -1,5 +1,13 @@
 var header = require('../header.js');
-
+/*
+============================================
+; Title: Exercise 3.3
+; Author: Professor Krasso
+; Date: 24 August 2020
+; Modified By: Arlix Sorto
+; Description: The Singleton Pattern
+;===========================================
+*/ 
 /*
  Expected output:
 

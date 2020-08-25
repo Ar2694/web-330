@@ -1,4 +1,13 @@
 var header = require('../header.js');
+/*
+============================================
+; Title: Exercise 3.2
+; Author: Professor Krasso
+; Date: 24 August 2020
+; Modified By: Arlix Sorto
+; Description: The Factory Pattern
+;===========================================
+*/ 
 
 /*
  Expected output:
