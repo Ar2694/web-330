@@ -1,0 +1,36 @@
+<!--
+============================================
+; Title: Exercise 4.2 
+; Author: Professor Krasso
+; Date: 30 August 2020
+; Modified By: Arlix Sorto
+; Description: HTTP GET and POST Operations
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sorto-exercise-4.2</title>
+
+    <!-- jQuery reference -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <button id="getId_1">Test HTTP GET request</button>
+
+<script>
+
+    $(function() {
+        $('#getId_1').click(function(){
+            $.get("https://dog.ceo/api/breeds/image/random", function(data, status){
+                console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status);
+            });
+        });
+    });
+
+</script>
+
+</body>
+</html>
