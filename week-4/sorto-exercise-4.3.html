@@ -1,0 +1,45 @@
+<!--
+============================================
+; Title: Exercise 4.3
+; Author: Professor Krasso
+; Date: 30 August 2020
+; Modified By: Arlix Sorto
+; Description: HTTP PUT and DELETE Operations
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sorto-exercise 4.3</title>
+
+    <!-- jQuery reference -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+<button id="deleteId_1">Test HTTP DELETE request</button>
+<script>
+
+    $(function() {
+          $('#deleteId_1').click(function(){
+              $.ajax({
+                url:"http://httpbin.org/delete",
+                dataType:"json",
+                type:"DELETE",
+                data:{
+                  id: "001",
+                  product_name:"Basketball",
+                  brand: "Spalding"
+                },
+                success: function(data, status){
+                  console.log("ID: " + data.form.id + "\nProduct Name: " +data.form.product_name + "\nBrand: " + data.form.brand);
+                }
+              });
+          });
+    });
+
+</script>
+
+</body>
+</html>
