@@ -1,0 +1,79 @@
+<!--
+============================================
+; Title: Exercise 5.2
+; Author: Professor Krasso
+; Date: 05 September 2020
+; Modified By: Arlix Sorto
+; Description: The Proxy Pattern
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5.2 - The Proxy Pattern</title>
+
+    <!-- jquery Reference Library -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<style>
+  body{
+    font-size: 1.2em;
+    background-color: #ececec;
+
+}
+.container {
+    display: block;
+      margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    padding: 150px 0;
+     background-color: #fffefe;
+
+}
+h2{
+    width: 100%;
+}
+button{
+    padding: 20px 50px;
+    font-weight: 600;
+}
+</style>
+</head>
+<body>
+
+
+  <div class="container">
+    <h2>Exercise 5.2 - The Proxy Pattern</h2>
+
+    <button id="btnExample1">Run Test</button>
+
+    <br />
+    <span id="proxyExampleOne"></span>
+  </div>
+
+<script>
+    $(function() {
+      var person = {
+        first_name: "John",
+        last_name: "Doe",
+        age: "25",
+        display: function(){
+
+          $("#proxyExampleOne").html("");
+
+          $("#proxyExampleOne").append("<br /> First Name: " + this.first_name + "<br />" +
+                                         "Last Name: " + this.last_name +   "<br />" + "Age: " + this.age);
+        }
+
+
+      }
+
+      $("#btnExample1").click($.proxy(person, "display"));
+
+    });
+</script>
+
+
+</body>
+</html>
