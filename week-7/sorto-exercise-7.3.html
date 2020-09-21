@@ -1,0 +1,65 @@
+<!--
+============================================
+; Title: Exercise 7.3
+; Author: Professor Krasso
+; Date: 20 September 2020
+; Modified By: Arlix Sorto
+; Description: The "foreach" Binding
+;===========================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Exercise 7.3</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+      crossorigin="anonymous"
+    />
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-3.5.1.js"></script>
+  </head>
+  <body>
+
+    <div role="main" class="container">
+
+      <h2>The "foreach" binding</h2>
+      <table class="table table-light table-striped table-hover">
+      <thead>
+      <tr>
+      <th>Title</th>
+      <th>Price</th>
+      </tr>
+      </thead>
+      <tbody data-bind="foreach: textbook">
+      <tr>
+      <td data-bind="text: title"></td>
+      <td data-bind="text: price"></td>
+      </tr>
+      </tbody>
+      </table>
+      <br/>
+     </div>
+    <script>
+      function TextBookViewModel() {
+        this.textbook = ko.observableArray([
+          { title: "StrengthsFinder 2.0", price: 1.09 },
+          { title: "Signing Naturally Unit 1-6 ", price: 0.89 },
+          { title: "Publication Manual of the APA ", price: 0.75 },
+          { title: "They Say, I Say ", price: 1.49 },
+        ]);
+      }
+      ko.applyBindings(new TextBookViewModel());
+    </script>
+  </body>
+</html>
