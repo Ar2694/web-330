@@ -35,20 +35,20 @@
 
       <h2>The "foreach" binding</h2>
       <table class="table table-light table-striped table-hover">
-      <thead>
-      <tr>
-      <th>Title</th>
-      <th>Price</th>
-      </tr>
-      </thead>
-      <tbody data-bind="foreach: textbook">
-      <tr>
-      <td data-bind="text: title"></td>
-      <td data-bind="text: price"></td>
-      </tr>
-      </tbody>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody data-bind="foreach: textbook">
+          <tr>
+            <td data-bind="text: title"></td>
+            <td data-bind="text: price"></td>
+          </tr>
+        </tbody>
       </table>
-      <br/>
+
      </div>
     <script>
       function TextBookViewModel() {
